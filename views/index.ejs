@@ -19,16 +19,18 @@
 
   <div id="page-wrapper" class="container">
     <header class="page-header">
-      <h1>This is the Title</h1>
+      <h1>Flash Cards Admin</h1>
     </header>
     
     <!-- This is the bs3-form boilerplate: -->
-    <form action="" method="POST" role="form">
-      <legend>Form title</legend>
+    <form action="/api/flashcards" method="POST" role="form">
+      <legend>Create a new flash card:</legend>
     
       <div class="form-group">
-        <label for="">label</label>
-        <input type="text" class="form-control" id="" placeholder="Input field">
+        <label for="question">Question:</label>
+        <input type="text" class="form-control" id="question" placeholder="Question">
+        <label for="answer">Answer:</label>
+        <input type="text" class="form-control" id="answer" placeholder="Answer">
       </div>
     
       <button type="submit" class="btn btn-primary">Submit</button>
