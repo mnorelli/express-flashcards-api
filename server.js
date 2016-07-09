@@ -12,7 +12,7 @@ var where = require("./utils/where");
 
 app.set("view engine", "ejs");
 
-app.use("/static", express.static("/public"));
+app.use("/static", express.static("./public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 
