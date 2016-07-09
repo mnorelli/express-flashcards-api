@@ -5,15 +5,12 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
-var where = require("./utils/where");
-var db = require("./models/index");
+// var where = require("./utils/where");
+// var db = require("./models/index");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-// connect to db
-// var dbName = 'flashcards';
-// mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/' + dbName);
 
 // serve the public folder as static assets
 app.use("/static", express.static("./public"));
@@ -27,7 +24,7 @@ app.get('/', function(req, res) {
   res.render("index");
 });
 
-app.use('/api/posts', routes.flashcardRouter);
+app.use('/api/flashcards', routes.flashcardRouter);
 
 app.listen(3000, function() {
   console.log("express-heroku-starter is running on port 3000");

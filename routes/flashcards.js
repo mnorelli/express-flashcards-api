@@ -1,7 +1,7 @@
 var express = require('express');
 var flashcardRouter = express.Router();
-
-var Flashcard = require('../models/flashcard.js');
+var db = require("../models/index");
+var Flashcard = require('../models/flashcard');
 
 flashcardRouter.route('/') // same as /api/flashcards
     .get(function(req, res){
@@ -11,12 +11,11 @@ flashcardRouter.route('/') // same as /api/flashcards
         })
     })
     .post(function(req, res){
-        Flashcard.create({ question: req.body.question, answer: req.body.answer, answerHidden: true}),
-        function(err, flashcard) {
+        Flashcard.create({ question: req.body.question, answer: req.body.answer, answerHidden: true}, function(err, flashcard) {
             if (err) { return res.send(err); }
             console.log(flashcard);
             res.send(flashcard);
-        }
+        });
     })
 
 module.exports = flashcardRouter;
