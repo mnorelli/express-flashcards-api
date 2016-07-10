@@ -1,0 +1,65 @@
+{"flashcards":
+    [{
+    _id: "1",
+    question: "What is Superman's guilty pleasure?",
+    answer: "Ben Affleck",
+    answerHidden: true,
+    __v: 0
+    },
+    {
+    _id: "2",
+    question: "I'm sorry I couldn't finish my homework...",
+    answer: "the dog ate my laptop!",
+    answerHidden: true,
+    __v: 0
+    },
+    {
+    _id: "3",
+    question: "_________ -- It's a trap!",
+    answer: "Monq's Chat room?",
+    answerHidden: true,
+    __v: 0
+    },
+    {
+    _id: "4",
+    question: "I get by with a little help from _________.",
+    answer: "John Cena!",
+    answerHidden: true,
+    __v: 0
+    },
+    {
+    _id: "5",
+    question: "The class field trip was completely ruined by _________.",
+    answer: "the guy in a clown suit",
+    answerHidden: true,
+    __v: 0
+    },
+    {
+    _id: "6",
+    question: "What's my secret power?",
+    answer: "ngAnimate",
+    answerHidden: true,
+    __v: 0
+    },
+    {
+    _id: "7",
+    question: "Why are there so many songs about rainbows?",
+    answer: "Leprachauns",
+    answerHidden: true,
+    __v: 0
+    },
+    {
+    _id: "8",
+    question: "Where do babies come from?",
+    answer: "Netflix and Chill",
+    answerHidden: true,
+    __v: 0
+    },
+    {
+    _id: "9",
+    question: "Why did the chicken cross the playground?",
+    answer: "To get to the other slide!",
+    answerHidden: true,
+    __v: 0
+    }]
+}

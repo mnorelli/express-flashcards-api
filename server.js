@@ -26,7 +26,7 @@ app.get('/', function(req, res) {
 
 app.use('/api/flashcards', routes.flashcardRouter);
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("express-heroku-starter is running on port 3000");
 });
 
