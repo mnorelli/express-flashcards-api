@@ -49,7 +49,7 @@ var flashcards_list =[
       answer: "I'm glad you asked.",
       answerHidden: true
     }
-  ];;
+  ];
 
 db.Flashcard.remove({}, function(err, flashcards){
 
