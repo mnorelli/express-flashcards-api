@@ -7,7 +7,7 @@ var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 // var where = require("./utils/where");
 // var db = require("./models/index");
-
+var port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
@@ -26,7 +26,7 @@ app.get('/', function(req, res) {
 
 app.use('/api/flashcards', routes.flashcardRouter);
 
-app.listen(process.env.PORT || 3000, function() {
+app.listen(port, function() {
     process.on('uncaughtException', function (err) {
         console.log(err);
     }); 
