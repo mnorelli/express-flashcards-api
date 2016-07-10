@@ -16,6 +16,27 @@ flashcardRouter.route('/') // same as /api/flashcards
             console.log(flashcard);
             res.send(flashcard);
         });
+    });
+
+flashcardRouter.route('/:flashcard_id')
+    .get(function(req, res){
+        Flashcard.findById(req.params.flashcard_id, function(err, flashcard){
+            if(err) { return res.status(404).send(err); }
+            res.send(flashcard);
+        });
     })
+    .put(function(req, res){
+        Flashcard.findOneAndUpdate({_id: req.params.flashcard_id}, req.query.post, function(err, flashcard){
+            if(err) { return res.send(err); }
+            res.send(flashcard);
+        });
+    })
+    .delete(function(req, res){
+        Flashcard.findByIdAndRemove(req.params.flashcard_id, function(err, flashcard){
+            if(err) { return res.send(err); }
+            res.status(200).send('Deleted');
+        });
+    })
+
 
 module.exports = flashcardRouter;
