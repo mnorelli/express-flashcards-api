@@ -27,6 +27,9 @@ app.get('/', function(req, res) {
 app.use('/api/flashcards', routes.flashcardRouter);
 
 app.listen(process.env.PORT || 3000, function() {
+    process.on('uncaughtException', function (err) {
+        console.log(err);
+    }); 
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
