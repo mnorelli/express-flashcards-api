@@ -37,9 +37,11 @@ If so, your app is still under version control with `git` but it only has a loca
 
 ```javascript
     mongoose.connect( process.env.MONGOLAB_URI ||
-                      process.env.MONGOHQ_URL || 
+                      process.env.MONGOLAB_COBALT_URI || 
                       "YOUR OWN LOCAL URL HERE" )
 ```
+
+_Note: The precise name of the environment variable for your database will be in your Heroku dashboard under Settings > Config Variables._
 
 Congrats! Your application knows what port to run on, and what database to connect to - you're almost all set up to work in "production" on Heroku's servers!
 
