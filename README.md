@@ -1,5 +1,10 @@
 ## Getting set up on Heroku with Node + Mongoose
 
+### The Not-So-MEAN Stack
+This is an example Express API designed for consumption by a separate Angular app, deployed to Heroku. This is one half of an intentionally de-coupled MEAN stack web app.
+
+Notice there is no `controllers` directory. Controller methods will be handled by Angular. I did build a form to *Create* data here (the C in CRUD), mainly for demonstration purposes. In the road map for this project, I will probably remove that code and put full CRUD routes and controller methods in Angular, behind user authentication. (Only admin users can edit the code.) Feel free to use the code here as an example of how to structure your own API but keep those things in mind.
+
 ### Before you do anything
 1) Let's remove the link to the repo we cloned and commit the starting point of our project in a local git repo. We can check the location of the remote repository by typing: `git remote -v`. In order to remove the link to the class repo, type: `git remote remove origin`. You can confirm this was successful with the first command.
 
