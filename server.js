@@ -5,9 +5,9 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
-// var where = require("./utils/where");
-// var db = require("./models/index");
-var port = process.env.PORT || 3000;
+var where = require("./utils/where");
+var db = require("./models/index");
+// var port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use("/static", express.static("./public"));
 // alias the views folder
 app.set("view engine", "ejs");
-
+app.set("port", process.env.PORT || 3000);
 // ROUTES //
 var routes = require("./routes");
 
@@ -26,10 +26,10 @@ app.get('/', function(req, res) {
 
 app.use('/api/flashcards', routes.flashcardRouter);
 
-app.listen(port, function() {
+app.listen(app.get("port"), function() {
     process.on('uncaughtException', function (err) {
         console.log(err);
     }); 
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  console.log("Express server listening on port %d in %s mode", app.get("port"), app.settings.env);
 });
 
